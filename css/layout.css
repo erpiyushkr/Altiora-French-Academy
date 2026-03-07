@@ -654,37 +654,39 @@ img {
 
 .stats-track {
     display: flex;
-    gap: 80px;
+    gap: 120px;
     width: max-content;
-    animation: statsScroll 18s linear infinite;
+    animation: statsMarquee 22s linear infinite;
     will-change: transform;
 }
 
 .stats-bar {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 18px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
     background: rgba(255, 255, 255, 0.85);
     border: 1px solid rgba(0, 0, 0, 0.04);
     box-shadow: 0 22px 60px rgba(0, 0, 0, 0.06);
     padding: 18px 24px;
-    align-items: center;
 }
 
 .stat {
     display: grid;
     gap: 4px;
     text-align: center;
+    flex-shrink: 0;
+    min-width: 160px;
 }
 
 .stat__value {
-    font-size: 26px;
-    font-weight: 800;
+    font-size: 1.6rem;
+    font-weight: 700;
 }
 
 .stat__label {
     color: var(--text-secondary);
-    font-size: 14px;
+    font-size: 0.9rem;
+    opacity: 0.7;
 }
 
 .exam-grid {
