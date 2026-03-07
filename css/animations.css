@@ -1,0 +1,85 @@
+/* Scroll reveal */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 320ms ease, transform 420ms ease;
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover lift helper */
+.hover-lift {
+    transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.hover-lift:hover,
+.hover-lift:focus-visible {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Floating illustration */
+[data-float] {
+    animation: float 8s ease-in-out infinite;
+}
+
+[data-float].float-slow {
+    animation-duration: 12s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Parallax helper */
+[data-parallax] {
+    will-change: transform;
+}
+
+.soft-underline {
+    position: relative;
+}
+
+.soft-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, rgba(213, 43, 30, 0.14), rgba(213, 43, 30, 0));
+    border-radius: 8px;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 220ms ease, transform 220ms ease;
+}
+
+.hover-lift:hover .soft-underline::after,
+.hover-lift:focus-visible .soft-underline::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

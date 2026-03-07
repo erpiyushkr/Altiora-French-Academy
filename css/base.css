@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg-primary: #f5f1ea;
+    --bg-secondary: #ece7df;
+    --text-primary: #3a3a3a;
+    --text-secondary: #8b8b8b;
+    --accent: #d52b1e;
+    --card: #ffffff;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.1);
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 18px;
+    --max-width: 1200px;
+    --gutter: 24px;
+    --heading-hero: 48px;
+    --heading-section: 32px;
+    --text-body: 18px;
+    --text-small: 15px;
+    --text-xs: 13px;
+    --transition-fast: 160ms ease;
+    --transition-base: 220ms ease;
+    --transition-slow: 320ms ease;
+    --gradient-hero: radial-gradient(circle at 20% 20%, rgba(213, 43, 30, 0.12), transparent 36%), linear-gradient(135deg, rgba(236, 231, 223, 0.95), rgba(245, 241, 234, 0.65));
+    --gradient-cta: linear-gradient(120deg, rgba(213, 43, 30, 0.12), rgba(60, 37, 34, 0.08));
+}
+
+/* Reset & base element styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: var(--text-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    margin: 0 0 16px;
+    color: var(--text-secondary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 12px;
+    color: var(--text-primary);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h1 {
+    letter-spacing: -0.4px;
+}
+
+h2 {
+    letter-spacing: -0.2px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+button {
+    font: inherit;
+    color: inherit;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
