@@ -49,10 +49,57 @@
                         <a class="btn btn--ghost btn--elevated" href="pages/contact.html">Book Free Consultation</a>
                     </div>
                 </div>
-                <div class="hero__visual" data-reveal data-parallax>
+                <div class="hero__visual" data-reveal data-parallax data-tilt>
                     <div class="hero__glow" aria-hidden="true"></div>
-                    <img class="hero__image" src="assets/images/hero-french-learning-canada.png"
-                        alt="Students learning French for Canada immigration" data-float />
+                    <div class="hero-layers" aria-hidden="true">
+                        <span class="hero-blob hero-blob--1"></span>
+                        <span class="hero-blob hero-blob--2"></span>
+                        <span class="hero-blob hero-blob--3"></span>
+                    </div>
+                    <div class="hero-image-frame">
+                        <img class="hero__image" src="assets/images/hero-french-learning-canada.png"
+                            alt="Students learning French for Canada immigration" data-float />
+                    </div>
+                    <div class="floating-card floating-card--rating" data-float>
+                        <div class="floating-card__title">4.9/5 Rating</div>
+                        <p class="floating-card__meta">2.1K learner reviews</p>
+                    </div>
+                    <div class="floating-card floating-card--badge" data-float>
+                        <div class="floating-card__pill">TEF B2</div>
+                        <div class="floating-card__title">Achieved in 4 months</div>
+                        <p class="floating-card__meta">Guided roadmap + mocks</p>
+                    </div>
+                    <div class="floating-card floating-card--avatars" data-float>
+                        <div class="avatar-stack" aria-hidden="true">
+                            <img src="https://i.pravatar.cc/80?img=15" alt="" />
+                            <img src="https://i.pravatar.cc/80?img=32" alt="" />
+                            <img src="https://i.pravatar.cc/80?img=48" alt="" />
+                        </div>
+                        <div class="floating-card__title">Live cohorts</div>
+                        <p class="floating-card__meta">Weekly sessions + replays</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="section section--stats" aria-label="Program stats">
+            <div class="container stats-bar" data-reveal>
+                <div class="stat">
+                    <div class="stat__value">20K+</div>
+                    <div class="stat__label">Students Enrolled</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__value">95%</div>
+                    <div class="stat__label">Success Rate</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__value">300+</div>
+                    <div class="stat__label">TEF Selections</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__value">50+</div>
+                    <div class="stat__label">Expert Sessions</div>
                 </div>
             </div>
         </section>
@@ -112,6 +159,32 @@
                         <h3 class="card__title">Flexible learning options</h3>
                         <p>One-to-one, small groups, and intensive tracks to match your goals.</p>
                     </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Premium Feature List -->
+        <section class="section section--alt" id="premium-features">
+            <div class="container feature-split">
+                <div class="feature-split__intro" data-reveal>
+                    <div class="section__eyebrow">Why it feels premium</div>
+                    <h2 class="section__title">Built like a modern SaaS learning platform</h2>
+                    <p class="section__subtitle">Layered guidance, analytics, and live coaching crafted for TEF &amp;
+                        TCF excellence.</p>
+                </div>
+                <div class="feature-split__lists" data-reveal>
+                    <div class="feature-list">
+                        <div class="feature-line">Structured TEF &amp; TCF preparation</div>
+                        <div class="feature-line">Detailed progress analytics</div>
+                        <div class="feature-line">Integrated speaking &amp; listening practice</div>
+                        <div class="feature-line">Organized study roadmap</div>
+                    </div>
+                    <div class="feature-list">
+                        <div class="feature-line">Live instructor-led classes</div>
+                        <div class="feature-line">Recorded lecture access</div>
+                        <div class="feature-line">Topic-wise mock tests</div>
+                        <div class="feature-line">Expert feedback sessions</div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -255,40 +328,45 @@
                     <h2 class="section__title">Learners achieving their Canada goals</h2>
                     <p class="section__subtitle">Real feedback from students preparing for TEF and TCF.</p>
                 </div>
-                <div class="grid grid-3">
-                    <article class="card card--testimonial hover-lift" data-reveal>
-                        <div class="quote-mark" aria-hidden="true">“</div>
-                        <div class="testimonial__header">
-                            <span class="avatar" aria-hidden="true">AS</span>
+                <div class="testimonial-grid">
+                    <article class="testimonial-card hover-lift" data-reveal>
+                        <div class="testimonial-card__top">
+                            <img class="testimonial-card__avatar" src="https://i.pravatar.cc/120?img=12"
+                                alt="Rohit Sharma" />
                             <div>
-                                <div class="card__meta">Ananya Sharma — TEF Canada</div>
-                                <div class="rating" aria-label="5 star rating">★★★★★</div>
+                                <div class="testimonial-card__name">Rohit Sharma</div>
+                                <div class="testimonial-card__meta">TEF Canada Cleared</div>
                             </div>
                         </div>
-                        <p>“The structured roadmap and live feedback sessions helped me reach B2 faster than I
-                            expected.”</p>
+                        <p class="testimonial-card__quote">“Altiora helped me reach B2 level within 4 months with
+                            structured mocks and 1:1 coaching.”</p>
+                        <div class="rating" aria-label="5 star rating">★★★★★</div>
                     </article>
-                    <article class="card card--testimonial hover-lift" data-reveal>
-                        <div class="quote-mark" aria-hidden="true">“</div>
-                        <div class="testimonial__header">
-                            <span class="avatar" aria-hidden="true">RM</span>
+                    <article class="testimonial-card hover-lift" data-reveal>
+                        <div class="testimonial-card__top">
+                            <img class="testimonial-card__avatar" src="https://i.pravatar.cc/120?img=28"
+                                alt="Sofia D’Souza" />
                             <div>
-                                <div class="card__meta">Rohan Mehta — TCF Canada</div>
-                                <div class="rating" aria-label="5 star rating">★★★★★</div>
+                                <div class="testimonial-card__name">Sofia D’Souza</div>
+                                <div class="testimonial-card__meta">TCF Canada B2</div>
                             </div>
                         </div>
-                        <p>“Mock exams mirrored the real test. I walked into TCF with confidence and clarity.”</p>
+                        <p class="testimonial-card__quote">“Live labs and feedback loops made speaking practice feel
+                            natural. The analytics kept me on track.”</p>
+                        <div class="rating" aria-label="5 star rating">★★★★★</div>
                     </article>
-                    <article class="card card--testimonial hover-lift" data-reveal>
-                        <div class="quote-mark" aria-hidden="true">“</div>
-                        <div class="testimonial__header">
-                            <span class="avatar" aria-hidden="true">PK</span>
+                    <article class="testimonial-card hover-lift" data-reveal>
+                        <div class="testimonial-card__top">
+                            <img class="testimonial-card__avatar" src="https://i.pravatar.cc/120?img=45"
+                                alt="Aarav Mehta" />
                             <div>
-                                <div class="card__meta">Priya Kapoor — TEF Canada</div>
-                                <div class="rating" aria-label="5 star rating">★★★★★</div>
+                                <div class="testimonial-card__name">Aarav Mehta</div>
+                                <div class="testimonial-card__meta">TEF Listening 320+</div>
                             </div>
                         </div>
-                        <p>“Flexible live classes plus replays fit my work schedule perfectly. Highly recommend.”</p>
+                        <p class="testimonial-card__quote">“Topic-wise mocks plus replay access meant I could revise
+                            anytime. Clear, premium experience.”</p>
+                        <div class="rating" aria-label="5 star rating">★★★★★</div>
                     </article>
                 </div>
             </div>
@@ -377,7 +455,7 @@
                         </div>
                     </div>
                     <div class="cta-figure" aria-hidden="true">
-                        <img src="assets/images/standing-girl.png" alt="" />
+                        <div class="cta-blob"></div>
                     </div>
                 </div>
             </div>

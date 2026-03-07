@@ -4,6 +4,7 @@
     document.addEventListener('DOMContentLoaded', () => {
         loadFooter();
         initYear();
+        initHeroTilt();
         if (window.AltioraAnimations) {
             window.AltioraAnimations.initScrollReveal();
             window.AltioraAnimations.initParallax();
@@ -45,5 +46,29 @@
         if (yearEl) {
             yearEl.textContent = new Date().getFullYear();
         }
+    }
+
+    function initHeroTilt() {
+        const utils = window.AltioraUtils || {};
+        if (utils.isReducedMotion && utils.isReducedMotion()) return;
+
+        const visual = document.querySelector('.hero__visual[data-tilt]');
+        const frame = visual?.querySelector('.hero-image-frame');
+        if (!visual || !frame) return;
+
+        const updateTilt = (event) => {
+            const rect = frame.getBoundingClientRect();
+            const x = ((event.clientX - rect.left) / rect.width - 0.5) * 8;
+            const y = ((event.clientY - rect.top) / rect.height - 0.5) * -8;
+            frame.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
+        };
+
+        const resetTilt = () => {
+            frame.style.transform = 'rotateX(0deg) rotateY(0deg)';
+        };
+
+        visual.addEventListener('mousemove', updateTilt);
+        visual.addEventListener('mouseenter', updateTilt);
+        visual.addEventListener('mouseleave', resetTilt);
     }
 })();
