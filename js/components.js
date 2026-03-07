@@ -42,6 +42,10 @@
                 link.setAttribute('href', prefix + target);
             }
         });
+        const logo = scope.querySelector('[data-logo-src]');
+        if (logo) {
+            logo.setAttribute('src', prefix + logo.getAttribute('data-logo-src'));
+        }
 
         if (toggle && nav) {
             toggle.addEventListener('click', () => toggleMenu(nav, toggle));

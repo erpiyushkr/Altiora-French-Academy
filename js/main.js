@@ -28,6 +28,7 @@
             const markup = await response.text();
             host.innerHTML = markup;
             hydrateFooterLinks(host);
+            hydrateFooterAssets(host);
         } catch (error) {
             console.error('[Footer] load failed:', error);
         }
@@ -39,6 +40,14 @@
             const target = link.getAttribute('data-nav-target');
             if (target) link.setAttribute('href', prefix + target);
         });
+    }
+
+    function hydrateFooterAssets(scope) {
+        const prefix = determineBasePrefix();
+        const logo = scope.querySelector('[data-footer-logo-src]');
+        if (logo) {
+            logo.setAttribute('src', prefix + logo.getAttribute('data-footer-logo-src'));
+        }
     }
 
     function initYear() {
