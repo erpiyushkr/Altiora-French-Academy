@@ -10,8 +10,8 @@
     --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.06);
     --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.1);
     --radius-sm: 10px;
-    --radius-md: 14px;
-    --radius-lg: 18px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
     --max-width: 1400px;
     --gutter: 40px;
     --heading-hero: 48px;
@@ -20,10 +20,11 @@
     --text-small: 15px;
     --text-xs: 13px;
     --transition-fast: 160ms ease;
-    --transition-base: 220ms ease;
+    --transition-base: 180ms ease;
     --transition-slow: 320ms ease;
     --gradient-hero: radial-gradient(circle at 20% 20%, rgba(213, 43, 30, 0.12), transparent 36%), linear-gradient(135deg, rgba(236, 231, 223, 0.95), rgba(245, 241, 234, 0.65));
     --gradient-cta: linear-gradient(120deg, rgba(213, 43, 30, 0.12), rgba(60, 37, 34, 0.08));
+    --header-height: 60px;
 }
 
 /* Reset & base element styles */
