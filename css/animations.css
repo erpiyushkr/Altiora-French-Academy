@@ -30,10 +30,6 @@
     animation-duration: 12s;
 }
 
-.hero-image-frame {
-    animation: heroFloat 6s ease-in-out infinite;
-}
-
 @keyframes heroFloat {
     0% {
         transform: translateY(0);
@@ -45,6 +41,26 @@
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes featureScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes statsScroll {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
     }
 }
 

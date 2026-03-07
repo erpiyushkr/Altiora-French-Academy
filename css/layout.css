@@ -41,6 +41,10 @@ img {
         radial-gradient(circle at 80% 0%, rgba(213, 43, 30, 0.08), transparent 30%), var(--bg-secondary);
 }
 
+#trust {
+    background: none;
+}
+
 .section__header {
     max-width: 720px;
     margin: 0 auto 48px;
@@ -638,7 +642,22 @@ img {
 
 /* Stats bar */
 .section--stats {
-    padding: 0rem;
+    padding: 0;
+    margin: 0;
+}
+
+.stats-marquee {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.stats-track {
+    display: flex;
+    gap: 80px;
+    width: max-content;
+    animation: statsScroll 18s linear infinite;
+    will-change: transform;
 }
 
 .stats-bar {
@@ -725,10 +744,10 @@ img {
 
 .feature-grid {
     display: flex;
-    gap: 30px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
+    gap: 28px;
+    width: max-content;
     padding-bottom: 6px;
+    overflow: hidden;
 }
 
 .feature-grid::-webkit-scrollbar {
@@ -737,21 +756,11 @@ img {
 
 .feature-grid .card {
     min-width: 260px;
-    flex: 1;
-}
-
-@keyframes scrollFeatures {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50px);
-    }
+    flex: 0 0 auto;
 }
 
 .feature-grid.auto-scroll {
-    animation: scrollFeatures 18s linear infinite;
+    animation: featureScroll 22s linear infinite;
 }
 
 .feature-grid.auto-scroll:hover {
