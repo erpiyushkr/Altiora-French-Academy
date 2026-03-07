@@ -57,9 +57,3 @@
         display: inline-flex;
     }
 }
-
-@media (max-width: 480px) {
-    .brand__logo {
-        height: 34px;
-    }
-}

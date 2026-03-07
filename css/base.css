@@ -12,8 +12,8 @@
     --radius-sm: 10px;
     --radius-md: 14px;
     --radius-lg: 18px;
-    --max-width: 1200px;
-    --gutter: 24px;
+    --max-width: 1400px;
+    --gutter: 40px;
     --heading-hero: 48px;
     --heading-section: 32px;
     --text-body: 18px;
@@ -48,6 +48,12 @@ body {
 }
 
 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.soft-image {
     max-width: 100%;
     height: auto;
     display: block;
