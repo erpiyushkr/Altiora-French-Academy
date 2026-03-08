@@ -511,6 +511,66 @@ img {
     font-size: 14px;
 }
 
+/* Learning system scoped styles */
+.section-label-learning {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #e43d30;
+    background: rgba(228, 61, 48, 0.08);
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.8rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-label-learning::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(228, 61, 48, 0.25), transparent);
+    animation: labelGlow 3s infinite linear;
+    opacity: 0.5;
+}
+
+@keyframes labelGlow {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.learning-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.learning-card {
+    background: #ffffff;
+    padding: 1.4rem 1.5rem;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.25s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+    .learning-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
 .testimonial-card__quote {
     color: var(--text-primary);
 }
