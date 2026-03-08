@@ -852,9 +852,9 @@ img {
 #exam-prep .feature-subtext {
     font-size: 0.9rem;
     color: #6f6f6f;
-    margin-left: 1.2rem;
-    margin-top: 0.3rem;
-    margin-bottom: 0.6rem;
+    margin-left: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
 }
 
 @media (max-width: 900px) {
@@ -926,9 +926,10 @@ img {
 #course-programs .feature-subtext {
     font-size: 0.9rem;
     color: #6f6f6f;
-    margin-left: 1.2rem;
-    margin-top: 0.3rem;
-    margin-bottom: 0.6rem;
+    margin-left: 2rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0rem;
 }
 
 @media (max-width: 900px) {
@@ -952,34 +953,108 @@ img {
 }
 
 /* Study Environment (scoped) */
-#study-environment .study-env-grid {
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    align-items: stretch;
-    gap: 3rem;
+/* Study Environment (scoped) */
+#study-environment .container {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
 }
 
-#study-environment .study-env-content {
-    grid-column: 2;
-    padding-left: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#study-environment .study-env-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     gap: 1rem;
 }
 
-#study-environment .study-env-features {
+/* Live Classes (scoped) */
+#live-classes .live-classes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+#live-classes .live-classes-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-right: 2rem;
+}
+
+#live-classes p {
+    margin: 0;
+    line-height: 1.4;
+}
+
+#live-classes .live-classes-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+#live-classes .feature-line {
+    font-weight: 600;
+    position: relative;
+    padding-left: 20px;
+    margin-top: 0.6rem;
+}
+
+#live-classes .feature-line::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 0.8rem;
+    color: #e43d30;
+}
+
+#live-classes .feature-subtext {
+    font-size: 0.9rem;
+    color: #6f6f6f;
+    margin-top: 0.2rem;
+    margin-bottom: 0.4rem;
+    margin-left: 1rem;
+}
+
+#live-classes .live-classes-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#live-classes .live-classes-illustration {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 16px;
+}
+
+@media (max-width: 900px) {
+    #live-classes .live-classes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #live-classes .live-classes-image {
+        order: 1;
+    }
+
+    #live-classes .live-classes-content {
+        order: 2;
+        padding-right: 0;
+    }
 }
 
 #study-environment .study-env-image {
-    grid-column: 1;
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
-    padding: 0;
-    margin: 0;
 }
 
 #study-environment .study-env-illustration {
@@ -989,6 +1064,28 @@ img {
     display: block;
     border-radius: 0;
     animation: studyImageFloat 6s ease-in-out infinite;
+}
+
+#study-environment p {
+    margin: 0;
+}
+
+#study-environment .study-env-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6rem;
+    padding-left: 2rem;
+}
+
+#study-environment img {
+    max-width: none;
+}
+
+#study-environment .study-env-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
 @keyframes studyImageFloat {
@@ -1009,7 +1106,7 @@ img {
     font-weight: 600;
     position: relative;
     padding-left: 24px;
-    margin-top: 1rem;
+    margin-top: 0.4rem;
 }
 
 #study-environment .feature-line::before {
@@ -1025,8 +1122,13 @@ img {
     font-size: 0.9rem;
     color: #6f6f6f;
     margin-left: 1.4rem;
-    margin-top: 0.3rem;
-    margin-bottom: 0.6rem;
+    /* margin-top: 0.2rem;
+    margin-bottom: 0.4rem; */
+}
+
+#study-environment .stack,
+#study-environment .stack-md {
+    gap: 0.6rem;
 }
 
 @media (max-width: 900px) {
