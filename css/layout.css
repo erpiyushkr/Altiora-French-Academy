@@ -1,4 +1,8 @@
 /* Layout scaffolding */
+:root {
+    --feature-icon-size: 10rem;
+}
+
 .container {
     width: 100%;
     max-width: var(--max-width);
@@ -385,8 +389,8 @@ img {
     align-items: flex-start;
     text-align: left;
     gap: 10px;
-    padding: 28px;
-    border-radius: 16px;
+    padding: 1.6rem 1.8rem;
+    border-radius: 1rem;
     background: #fff;
     transition: all 0.25s ease;
 }
@@ -398,19 +402,17 @@ img {
 }
 
 .feature-icon {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    background: #f6f6f6;
-    margin-bottom: 12px;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0.8rem;
 }
 
 .feature-icon img {
-    width: 20px;
-    height: 20px;
+    width: var(--feature-icon-size);
+    height: var(--feature-icon-size);
     object-fit: contain;
 }
 
