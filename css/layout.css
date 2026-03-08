@@ -846,6 +846,9 @@ img {
 
 #exam-prep .feature-line {
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     margin-top: 1rem;
 }
 
@@ -920,6 +923,9 @@ img {
 
 #course-programs .feature-line {
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     margin-top: 1rem;
 }
 
@@ -950,10 +956,85 @@ img {
 .section--stats {
     padding: 0;
     margin: 0;
+    overflow: hidden;
+    background: var(--background-color);
+}
+
+.section--stats .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.section--stats .stats-marquee {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.section--stats .stats-marquee::before,
+.section--stats .stats-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.section--stats .stats-marquee::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-secondary, #ffffff), transparent);
+}
+
+.section--stats .stats-marquee::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-secondary, #ffffff), transparent);
+}
+
+.section--stats .stats-track {
+    display: flex;
+    width: max-content;
+    animation: statsScroll 30s linear infinite;
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.section--stats .stats-bar {
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+    padding: 2rem 4rem;
+    background: #ffffff;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+
+.section--stats .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 160px;
+}
+
+@keyframes statsScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 /* Study Environment (scoped) */
 /* Study Environment (scoped) */
+#study-environment {
+    margin-bottom: 0;
+}
+
 #study-environment .container {
     padding-left: 0;
     padding-right: 0;
@@ -966,7 +1047,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
 }
 
 /* Live Classes (scoped) */
@@ -999,18 +1080,19 @@ img {
 
 #live-classes .feature-line {
     font-weight: 600;
-    position: relative;
-    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     margin-top: 0.6rem;
+    padding-left: 0;
 }
 
 #live-classes .feature-line::before {
     content: "◆";
-    position: absolute;
-    left: 0;
-    top: 2px;
+    position: static;
     font-size: 0.8rem;
     color: #e43d30;
+    margin: 0;
 }
 
 #live-classes .feature-subtext {
@@ -1053,14 +1135,16 @@ img {
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: flex-start;
+    height: auto;
 }
 
 #study-environment .study-env-illustration {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
     display: block;
     border-radius: 0;
     animation: studyImageFloat 6s ease-in-out infinite;
@@ -1074,12 +1158,12 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.6rem;
-    padding-left: 2rem;
+    gap: 1rem;
+    padding-left: 0;
 }
 
 #study-environment img {
-    max-width: none;
+    max-width: 100%;
 }
 
 #study-environment .study-env-features {
@@ -1104,18 +1188,19 @@ img {
 
 #study-environment .feature-line {
     font-weight: 600;
-    position: relative;
-    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
     margin-top: 0.4rem;
+    padding-left: 0;
 }
 
 #study-environment .feature-line::before {
     content: "➜";
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: static;
     color: #e43d30;
     font-size: 0.9rem;
+    margin: 0;
 }
 
 #study-environment .feature-subtext {
@@ -1152,44 +1237,12 @@ img {
     }
 }
 
-.stats-marquee {
-    overflow: hidden;
-    width: 100%;
-    position: relative;
-}
-
-.stats-track {
-    display: flex;
-    gap: 120px;
-    width: max-content;
-    animation: statsMarquee 22s linear infinite;
-    will-change: transform;
-}
-
-.stats-bar {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    background: rgba(255, 255, 255, 0.85);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.06);
-    padding: 18px 24px;
-}
-
-.stat {
-    display: grid;
-    gap: 4px;
-    text-align: center;
-    flex-shrink: 0;
-    min-width: 160px;
-}
-
-.stat__value {
+.section--stats .stat__value {
     font-size: 1.6rem;
     font-weight: 700;
 }
 
-.stat__label {
+.section--stats .stat__label {
     color: var(--text-secondary);
     font-size: 0.9rem;
     opacity: 0.7;
@@ -1245,7 +1298,7 @@ img {
 .feature-line {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 6px;
     font-weight: 600;
 }
 
@@ -1261,6 +1314,7 @@ img {
     color: #16a34a;
     font-size: 12px;
     flex-shrink: 0;
+    margin: 0;
 }
 
 @media (max-width: 900px) {
@@ -1328,17 +1382,36 @@ img {
     flex-wrap: wrap;
 }
 
-.testimonials-highlight .testimonial-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 1.2fr);
-    gap: 32px;
-    align-items: center;
-    position: relative;
+#testimonials {
+    overflow: hidden;
 }
 
-.testimonials-highlight .testimonial-marquee {
+#testimonials .testimonials-grid {
+    display: grid !important;
+    grid-template-columns: 3fr 1fr !important;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+#testimonials .testimonials-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+}
+
+#testimonials .section__header {
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+#testimonials .testimonial-marquee {
     position: relative;
     overflow: hidden;
+    width: 100%;
     border-radius: 18px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 241, 234, 0.9));
     border: 1px solid rgba(0, 0, 0, 0.04);
@@ -1347,59 +1420,61 @@ img {
     isolation: isolate;
 }
 
-.testimonials-highlight .testimonial-marquee::before,
-.testimonials-highlight .testimonial-marquee::after {
+#testimonials .testimonial-marquee::before,
+#testimonials .testimonial-marquee::after {
     content: "";
     position: absolute;
     top: 0;
-    bottom: 0;
-    width: 70px;
+    height: 100%;
+    width: 80px;
     z-index: 2;
     pointer-events: none;
 }
 
-.testimonials-highlight .testimonial-marquee::before {
+#testimonials .testimonial-marquee::before {
     left: 0;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, var(--bg-secondary, #ffffff), transparent);
 }
 
-.testimonials-highlight .testimonial-marquee::after {
+#testimonials .testimonial-marquee::after {
     right: 0;
-    background: linear-gradient(270deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(to left, var(--bg-secondary, #ffffff), transparent);
 }
 
-.testimonials-highlight .testimonial-track {
+#testimonials .testimonial-track {
     display: flex;
-    gap: 16px;
+    gap: 1.5rem;
     align-items: stretch;
     width: max-content;
-    animation: testimonialScroll 26s linear infinite;
+    animation: testimonialScroll 35s linear infinite;
     will-change: transform;
 }
 
-.testimonials-highlight .testimonial-card {
+#testimonials .testimonial-card {
     min-width: 280px;
     max-width: 320px;
     min-height: 240px;
 }
 
-.testimonials-highlight .testimonial-card__quote {
+#testimonials .testimonial-card__quote {
     font-size: 15px;
     line-height: 1.5;
 }
 
-.testimonials-highlight .testimonial-illustration {
+#testimonials .testimonials-right {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-    position: relative;
     height: 100%;
+    min-width: 220px;
 }
 
-.testimonials-highlight .testimonial-girl {
-    width: 100%;
-    max-width: 360px;
+#testimonials .testimonial-girl {
+    max-height: 420px;
+    width: auto;
+    display: block;
     filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.12));
+    animation: floatGirl 6s ease-in-out infinite;
 }
 
 .testimonials-highlight [data-float] {
@@ -1430,23 +1505,22 @@ img {
     }
 }
 
-@media (max-width: 1024px) {
-    .testimonials-highlight .testimonial-layout {
+@media (max-width: 900px) {
+    #testimonials .testimonials-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 
-    .testimonials-highlight .testimonial-illustration {
+    #testimonials .testimonials-right {
         display: none;
     }
 }
 
 @media (max-width: 640px) {
-    .testimonials-highlight .testimonial-marquee {
+    #testimonials .testimonial-marquee {
         padding: 12px;
     }
 
-    .testimonials-highlight .testimonial-card {
+    #testimonials .testimonial-card {
         min-width: 240px;
     }
 }
