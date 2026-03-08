@@ -1,6 +1,6 @@
 /* Layout scaffolding */
 :root {
-    --feature-icon-size: 3rem;
+    --feature-icon-size: 5rem;
 }
 
 .container {
@@ -11,7 +11,7 @@
 }
 
 .section {
-    padding: 3.5rem 1rem 3.5rem 1rem;
+    padding: 3.5rem 1rem 2.5rem 1rem;
 }
 
 .section--alt {
@@ -74,7 +74,7 @@ img {
 
 .section__subtitle {
     color: var(--text-secondary);
-    margin-top: 8px;
+    margin-top: 4px;
 }
 
 /* Grid helpers */
@@ -376,6 +376,46 @@ img {
     transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
+/* Scoped feature row (trust section only) */
+.altiora-feature-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.altiora-feature-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 1.4rem 1.5rem;
+    text-align: center;
+    transition: all 0.25s ease;
+}
+
+.altiora-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.altiora-feature-icon {
+    display: block;
+    margin: 0 auto 0.8rem auto;
+    width: 2.8rem;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .altiora-feature-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .altiora-feature-row {
+        grid-template-columns: 1fr;
+    }
+}
+
 .card:hover,
 .card:focus-within {
     transform: translateY(-4px);
@@ -403,7 +443,6 @@ img {
 
 .feature-icon {
     display: block;
-    margin: 0 auto 1rem;
     width: var(--feature-icon-size);
     height: auto;
     object-fit: contain;
@@ -411,8 +450,8 @@ img {
 
 .card__title {
     font-size: 20px;
-    margin-top: 4px;
-    margin-bottom: 8px;
+    /* margin-top: 4px;
+    margin-bottom: 4px; */
 }
 
 .card__meta {
@@ -691,7 +730,7 @@ img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.8rem;
-    margin-top: 40px;
+    margin-top: 0px;
 }
 
 @media (max-width: 768px) {
