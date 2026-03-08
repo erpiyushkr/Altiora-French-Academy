@@ -555,6 +555,10 @@ img {
 }
 
 /* Learning System (scoped) */
+#learning-system {
+    position: relative;
+}
+
 #learning-system .learning-system-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -634,28 +638,25 @@ img {
 }
 
 #learning-system .learning-system-right {
-    padding: 0;
-    margin: 0;
     height: 100%;
     display: flex;
     align-items: stretch;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
 }
 
-#learning-system .learning-system-right img {
+#learning-system .learning-system-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     border-radius: 16px;
+    max-width: none;
 }
 
-#learning-system .learning-system-right img.media-block__image {
-    all: unset;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border-radius: 16px;
+#learning-system img {
+    max-width: none;
 }
 
 @media (max-width: 900px) {
@@ -667,7 +668,7 @@ img {
         padding-right: 0;
     }
 
-    #learning-system .learning-system-right img {
+    #learning-system .learning-system-image {
         height: auto;
     }
 }
