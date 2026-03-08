@@ -797,6 +797,80 @@ img {
     box-shadow: var(--shadow-soft);
 }
 
+/* Exam prep (scoped) */
+#exam-prep .exam-prep-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+#exam-prep .exam-prep-image {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#exam-prep .exam-prep-illustration {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 18px;
+    animation: examImageFloat 6s ease-in-out infinite;
+}
+
+@keyframes examImageFloat {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#exam-prep .exam-prep-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#exam-prep .exam-prep-features {
+    display: flex;
+    flex-direction: column;
+}
+
+#exam-prep .feature-line {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+#exam-prep .feature-subtext {
+    font-size: 0.9rem;
+    color: #6f6f6f;
+    margin-left: 1.2rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.6rem;
+}
+
+@media (max-width: 900px) {
+    #exam-prep .exam-prep-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #exam-prep .exam-prep-image {
+        order: 1;
+    }
+
+    #exam-prep .exam-prep-content {
+        order: 2;
+    }
+}
+
 /* Stats bar */
 .section--stats {
     padding: 0;
