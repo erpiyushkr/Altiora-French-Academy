@@ -954,13 +954,14 @@ img {
 /* Study Environment (scoped) */
 #study-environment .study-env-grid {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: 1.3fr 1fr;
     align-items: stretch;
     gap: 3rem;
 }
 
 #study-environment .study-env-content {
-    padding-right: 2rem;
+    grid-column: 2;
+    padding-left: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -973,9 +974,10 @@ img {
 }
 
 #study-environment .study-env-image {
+    grid-column: 1;
     display: flex;
     align-items: stretch;
-    justify-content: flex-end;
+    justify-content: flex-start;
     padding: 0;
     margin: 0;
 }
@@ -1033,12 +1035,14 @@ img {
     }
 
     #study-environment .study-env-image {
+        grid-column: auto;
         order: 1;
     }
 
     #study-environment .study-env-content {
+        grid-column: auto;
         order: 2;
-        padding-right: 0;
+        padding-left: 0;
     }
 
     #study-environment .study-env-illustration {
