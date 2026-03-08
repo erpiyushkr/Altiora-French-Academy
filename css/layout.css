@@ -882,7 +882,7 @@ img {
 #course-programs .course-programs-image {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
 }
 
 #course-programs .course-programs-illustration {
