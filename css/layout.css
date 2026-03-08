@@ -1,6 +1,6 @@
 /* Layout scaffolding */
 :root {
-    --feature-icon-size: 10rem;
+    --feature-icon-size: 3rem;
 }
 
 .container {
@@ -389,7 +389,7 @@ img {
     align-items: flex-start;
     text-align: left;
     gap: 10px;
-    padding: 1.6rem 1.8rem;
+    padding: 1.5rem 1.6rem;
     border-radius: 1rem;
     background: #fff;
     transition: all 0.25s ease;
@@ -398,21 +398,14 @@ img {
 .card--feature:hover,
 .card--feature:focus-within {
     transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 .feature-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    padding: 0;
-    margin-bottom: 0.8rem;
-}
-
-.feature-icon img {
+    display: block;
+    margin: 0 auto 1rem;
     width: var(--feature-icon-size);
-    height: var(--feature-icon-size);
+    height: auto;
     object-fit: contain;
 }
 
@@ -696,12 +689,12 @@ img {
 
 .feature-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
     margin-top: 40px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .feature-grid {
         grid-template-columns: 1fr;
     }
