@@ -57,3 +57,98 @@
         display: inline-flex;
     }
 }
+
+@media (max-width: 900px) {
+    .hero {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .hero__actions {
+        justify-content: center;
+    }
+
+    .hero .stack-lg {
+        align-items: center;
+    }
+
+    .section__header,
+    .exam-prep-content,
+    .course-programs-content,
+    .study-env-content,
+    .live-classes-content {
+        text-align: center;
+        align-items: center;
+    }
+
+    .feature-line,
+    .feature-subtext {
+        margin-left: 0;
+    }
+
+    .course-flex,
+    .course-grid,
+    .level-grid {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .course-copy,
+    .course-card,
+    .level-card {
+        align-items: center;
+        text-align: center;
+    }
+
+    .cta-line {
+        justify-content: center;
+    }
+
+    .course-flex--reverse {
+        direction: ltr;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding-inline: 1.25rem;
+    }
+
+    .section {
+        padding: 3rem 1rem 2rem;
+    }
+
+    .section--stats .stats-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem 2rem;
+    }
+
+    .section--stats .stat {
+        min-width: auto;
+    }
+
+    #testimonials .section__header {
+        text-align: center !important;
+    }
+
+    .badge-text {
+        white-space: normal;
+        text-align: center;
+        font-size: 0.75rem;
+    }
+
+
+    @media (max-width: 480px) {
+        .badge-text {
+            white-space: normal;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+    }
+
+    .course-illustration {
+        max-width: 100%;
+    }
+}
