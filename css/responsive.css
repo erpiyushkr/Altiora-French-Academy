@@ -133,22 +133,16 @@
         text-align: center !important;
     }
 
-    .badge-text {
-        white-space: normal;
-        text-align: center;
-        font-size: 0.75rem;
-    }
-
-
-    @media (max-width: 480px) {
-        .badge-text {
-            white-space: normal;
-            text-align: center;
-            font-size: 0.75rem;
-        }
-    }
-
     .course-illustration {
         max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .badge-text,
+    .badge span {
+        white-space: normal;
+        text-align: center;
     }
 }
